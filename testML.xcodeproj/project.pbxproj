@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26F1AB410EF474C6AE4FFFD2 /* libPods-testML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBDAD7A5F332C8631457A3E /* libPods-testML.a */; };
 		463E8E5720AA008B007781B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 463E8E5620AA008B007781B6 /* main.m */; };
 		463E8E5A20AA008B007781B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 463E8E5920AA008B007781B6 /* AppDelegate.m */; };
 		463E8E5D20AA008B007781B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 463E8E5C20AA008B007781B6 /* ViewController.m */; };
 		463E8E6020AA008B007781B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 463E8E5E20AA008B007781B6 /* Main.storyboard */; };
 		463E8E6220AA008B007781B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 463E8E6120AA008B007781B6 /* Assets.xcassets */; };
 		463E8E6520AA008B007781B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 463E8E6320AA008B007781B6 /* LaunchScreen.storyboard */; };
+		4642718F20AB3D66000DE497 /* ApiHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4642718E20AB3D66000DE497 /* ApiHandler.m */; };
+		4642719120AB4AB3000DE497 /* MediosDePagoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4642719020AB4AB3000DE497 /* MediosDePagoViewController.m */; };
+		4642719720AB6DA6000DE497 /* BancosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4642719620AB6DA6000DE497 /* BancosViewController.m */; };
+		4642719A20AB8B18000DE497 /* CuotasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4642719920AB8B18000DE497 /* CuotasViewController.m */; };
+		4642719D20ABA185000DE497 /* popUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4642719C20ABA185000DE497 /* popUpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,20 @@
 		463E8E6120AA008B007781B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		463E8E6420AA008B007781B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		463E8E6620AA008B007781B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4642718920AB2240000DE497 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		4642718D20AB3D56000DE497 /* ApiHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiHandler.h; sourceTree = "<group>"; };
+		4642718E20AB3D66000DE497 /* ApiHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiHandler.m; sourceTree = "<group>"; };
+		4642719020AB4AB3000DE497 /* MediosDePagoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediosDePagoViewController.m; sourceTree = "<group>"; };
+		4642719220AB4ABE000DE497 /* MediosDePagoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediosDePagoViewController.h; sourceTree = "<group>"; };
+		4642719620AB6DA6000DE497 /* BancosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BancosViewController.m; sourceTree = "<group>"; };
+		4642719820AB6DAE000DE497 /* BancosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BancosViewController.h; sourceTree = "<group>"; };
+		4642719920AB8B18000DE497 /* CuotasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CuotasViewController.m; sourceTree = "<group>"; };
+		4642719B20AB8B21000DE497 /* CuotasViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CuotasViewController.h; sourceTree = "<group>"; };
+		4642719C20ABA185000DE497 /* popUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popUpViewController.m; sourceTree = "<group>"; };
+		4642719E20ABA190000DE497 /* popUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = popUpViewController.h; sourceTree = "<group>"; };
+		9FBDAD7A5F332C8631457A3E /* libPods-testML.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testML.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8DCF5D6B35C7E182F2B87CB /* Pods-testML.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testML.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testML/Pods-testML.debug.xcconfig"; sourceTree = "<group>"; };
+		EC5841E4D94CCD3198C4BB9B /* Pods-testML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testML.release.xcconfig"; path = "Pods/Target Support Files/Pods-testML/Pods-testML.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F1AB410EF474C6AE4FFFD2 /* libPods-testML.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +65,8 @@
 			children = (
 				463E8E5420AA008B007781B6 /* testML */,
 				463E8E5320AA008B007781B6 /* Products */,
+				67F0E25178A91B944EC8FD1A /* Pods */,
+				B7D6EC2C1F98C04622F5FBE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +81,10 @@
 		463E8E5420AA008B007781B6 /* testML */ = {
 			isa = PBXGroup;
 			children = (
+				4642719420AB4B28000DE497 /* Utils */,
+				4642719320AB4B1C000DE497 /* Classes */,
 				463E8E5820AA008B007781B6 /* AppDelegate.h */,
 				463E8E5920AA008B007781B6 /* AppDelegate.m */,
-				463E8E5B20AA008B007781B6 /* ViewController.h */,
-				463E8E5C20AA008B007781B6 /* ViewController.m */,
 				463E8E5E20AA008B007781B6 /* Main.storyboard */,
 				463E8E6120AA008B007781B6 /* Assets.xcassets */,
 				463E8E6320AA008B007781B6 /* LaunchScreen.storyboard */,
@@ -79,6 +102,50 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4642719320AB4B1C000DE497 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				463E8E5B20AA008B007781B6 /* ViewController.h */,
+				463E8E5C20AA008B007781B6 /* ViewController.m */,
+				4642719220AB4ABE000DE497 /* MediosDePagoViewController.h */,
+				4642719020AB4AB3000DE497 /* MediosDePagoViewController.m */,
+				4642719820AB6DAE000DE497 /* BancosViewController.h */,
+				4642719620AB6DA6000DE497 /* BancosViewController.m */,
+				4642719B20AB8B21000DE497 /* CuotasViewController.h */,
+				4642719920AB8B18000DE497 /* CuotasViewController.m */,
+				4642719E20ABA190000DE497 /* popUpViewController.h */,
+				4642719C20ABA185000DE497 /* popUpViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		4642719420AB4B28000DE497 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4642718920AB2240000DE497 /* Constants.h */,
+				4642718D20AB3D56000DE497 /* ApiHandler.h */,
+				4642718E20AB3D66000DE497 /* ApiHandler.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		67F0E25178A91B944EC8FD1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCF5D6B35C7E182F2B87CB /* Pods-testML.debug.xcconfig */,
+				EC5841E4D94CCD3198C4BB9B /* Pods-testML.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B7D6EC2C1F98C04622F5FBE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FBDAD7A5F332C8631457A3E /* libPods-testML.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +153,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 463E8E6920AA008B007781B6 /* Build configuration list for PBXNativeTarget "testML" */;
 			buildPhases = (
+				D2DD490E38125CFD4C33D1D2 /* [CP] Check Pods Manifest.lock */,
 				463E8E4E20AA008A007781B6 /* Sources */,
 				463E8E4F20AA008A007781B6 /* Frameworks */,
 				463E8E5020AA008A007781B6 /* Resources */,
+				7375544362D7AC14A009BA58 /* [CP] Embed Pods Frameworks */,
+				EDD65123BC7DB3853222844F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +215,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7375544362D7AC14A009BA58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-testML/Pods-testML-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2DD490E38125CFD4C33D1D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EDD65123BC7DB3853222844F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-testML/Pods-testML-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		463E8E4E20AA008A007781B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -152,7 +270,12 @@
 			files = (
 				463E8E5D20AA008B007781B6 /* ViewController.m in Sources */,
 				463E8E5A20AA008B007781B6 /* AppDelegate.m in Sources */,
+				4642719720AB6DA6000DE497 /* BancosViewController.m in Sources */,
+				4642719D20ABA185000DE497 /* popUpViewController.m in Sources */,
 				463E8E5720AA008B007781B6 /* main.m in Sources */,
+				4642719A20AB8B18000DE497 /* CuotasViewController.m in Sources */,
+				4642718F20AB3D66000DE497 /* ApiHandler.m in Sources */,
+				4642719120AB4AB3000DE497 /* MediosDePagoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +393,7 @@
 		};
 		463E8E6A20AA008B007781B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8DCF5D6B35C7E182F2B87CB /* Pods-testML.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = testML/Info.plist;
@@ -281,6 +405,7 @@
 		};
 		463E8E6B20AA008B007781B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC5841E4D94CCD3198C4BB9B /* Pods-testML.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = testML/Info.plist;
@@ -309,6 +434,7 @@
 				463E8E6B20AA008B007781B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
