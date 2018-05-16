@@ -8,6 +8,7 @@
 
 #import "BancosViewController.h"
 #import "ApiHandler.h"
+#import <MBProgressHUD.h>
 
 @interface BancosViewController () <ApiHandlerDelegate>
 
@@ -19,18 +20,9 @@
 	[super viewDidLoad];
 	[[ApiHandler sharedInstance]setDelegate:self];
 	
-	self.activityIndicatorView = [[UIActivityIndicatorView alloc] initWithFrame:self.view.frame];
-	[self.view addSubview:self.activityIndicatorView];
-	
 	// Do any additional setup after loading the view, typically from a nib.
 	monto = [[ApiHandler sharedInstance]monto];
 	bancos = [[NSDictionary alloc]initWithDictionary:[[ApiHandler sharedInstance]cardIssuers]];
-	
-	if (bancos.count == 0) {
-		//esperar hasta tener bancos
-		[self.activityIndicatorView startAnimating];
-		
-	}
 	
 	self.monto.text = [NSString stringWithFormat:@"$%.02f", monto];
 	self.mediodepago.text = [[ApiHandler sharedInstance]mpseleccionado];
@@ -63,7 +55,11 @@
 }
 
 - (IBAction)handleButtonClick:(id)sender{
-	[self performSegueWithIdentifier:@"toCuotas" sender:self];
+	//antes de hacer el push a la siguiente view, pido los bancos
+	
+	[[ApiHandler sharedInstance]getInstallmentsForIssuer:idBanco];
+	[[ApiHandler sharedInstance]setBancoseleccionado:self.banco.text];
+	[[ApiHandler sharedInstance]setBanco_thumb:self.banco_thumbnail.image];
 }
 
 #pragma mark UIPickerDelegate
@@ -107,18 +103,29 @@
 	return bancos.count;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-	//antes de hacer el push a la siguiente view, pido los bancos
-	
-	[[ApiHandler sharedInstance]getInstallmentsForIssuer:idBanco];
-	[[ApiHandler sharedInstance]setBancoseleccionado:self.banco.text];
-	[[ApiHandler sharedInstance]setBanco_thumb:self.banco_thumbnail.image];
-}
 #pragma mark - apidelegate
--(void)didFinishLoadingIssuers{
-	[self.activityIndicatorView stopAnimating];
+-(void)didFinishLoadingInstallments{
 	bancos = [[NSDictionary alloc]initWithDictionary:[[ApiHandler sharedInstance]cardIssuers]];
 	[self.pickerBancos reloadAllComponents];
+	
+	//quitar wait
+	[MBProgressHUD hideHUDForView:self.view animated:YES];
+	
+	[self performSegueWithIdentifier:@"toCuotas" sender:self];
+	
+}
+
+-(void)handleError{
+	
+	UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error!"
+																   message:@"Ha ocurrido un problema!"
+															preferredStyle:UIAlertControllerStyleAlert];
+	
+	UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+														  handler:^(UIAlertAction * action) {}];
+	
+	[alert addAction:defaultAction];
+	[self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

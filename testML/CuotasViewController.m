@@ -9,7 +9,7 @@
 #import "CuotasViewController.h"
 #import "ApiHandler.h"
 
-@interface CuotasViewController () <ApiHandlerDelegate>
+@interface CuotasViewController ()
 
 @end
 
@@ -93,20 +93,6 @@
 		return 0;
 	}
 	return [[cuotas valueForKey:@"Cuotas"]count];
-}
-
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-//	//antes de hacer el pop al rootViewController me guardo el recommended message
-//	[[ApiHandler sharedInstance]setRecommended_message:self.recommended_message.text];
-//	
-//	[self.navigationController popToRootViewControllerAnimated:YES];
-//	
-//}
-#pragma mark - apidelegate
--(void)didFinishLoadingInstallments{
-	[self.activityIndicatorView stopAnimating];
-	cuotas = [[NSDictionary alloc]initWithDictionary:[[ApiHandler sharedInstance]installments]];
-	[self.pickerCuotas reloadAllComponents];
 }
 
 @end

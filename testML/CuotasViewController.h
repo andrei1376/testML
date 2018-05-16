@@ -39,7 +39,5 @@
 // returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component;
 
-#pragma mark - ApiDelegate
--(void)didFinishLoadingInstallments;
 
 @end

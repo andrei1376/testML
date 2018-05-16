@@ -62,6 +62,9 @@
 		NSLog(@"Payment Methods Cargados");
 	} failure:^(NSURLSessionTask *operation, NSError *error) {
 		NSLog(@"%@", error);
+		if (self.delegate) {
+			[self.delegate handleError];
+		}
 		
 	}];
 }
@@ -81,6 +84,9 @@
 		}
 	} failure:^(NSURLSessionTask *operation, NSError *error) {
 		NSLog(@"%@", error);
+		if (self.delegate) {
+			[self.delegate handleError];
+		}
 		
 	}];
 	
@@ -100,12 +106,14 @@
 		}
 	} failure:^(NSURLSessionTask *operation, NSError *error) {
 		NSLog(@"%@", error);
+		if (self.delegate) {
+			[self.delegate handleError];
+		}
 		
 	}];
 	
 	
 }
-
 
 
 @end

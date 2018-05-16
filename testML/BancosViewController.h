@@ -22,8 +22,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *mediopago_thumbnail;
 @property (weak, nonatomic) IBOutlet UIImageView *banco_thumbnail;
 
-@property (nonatomic, strong) UIActivityIndicatorView *activityIndicatorView;
-
 - (IBAction)handleButtonClick:(id)sender;
 
 #pragma mark - UIPickerViewDelegate
@@ -38,6 +36,6 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component;
 
 #pragma mark - ApiDelegate
--(void)didFinishLoadingIssuers;
+-(void)didFinishLoadingInstallments;
 
 @end

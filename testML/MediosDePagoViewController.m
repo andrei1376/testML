@@ -8,6 +8,7 @@
 
 #import "MediosDePagoViewController.h"
 #import "ApiHandler.h"
+#import <MBProgressHUD.h>
 
 @interface MediosDePagoViewController () <ApiHandlerDelegate>
 
@@ -49,6 +50,9 @@
 - (IBAction)handleButtonClick:(id)sender{
 	
 	//agregar wait
+	
+	[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+	
 	[[ApiHandler sharedInstance]getCardIssuers:idMedioPago];
 	[[ApiHandler sharedInstance]setMediopagoSel:idMedioPago];
 	[[ApiHandler sharedInstance]setMpseleccionado:self.mediodepago.text];
@@ -93,7 +97,22 @@
 #pragma mark - apidelegate
 -(void)didFinishLoadingIssuers{
 	//quitar wait
+	[MBProgressHUD hideHUDForView:self.view animated:YES];
+	
 	[self performSegueWithIdentifier:@"toBancos" sender:self];
+}
+
+-(void)handleError{
+
+		UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error!"
+																	   message:@"Ha ocurrido un problema!"
+																preferredStyle:UIAlertControllerStyleAlert];
+		
+		UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+															  handler:^(UIAlertAction * action) {}];
+		
+		[alert addAction:defaultAction];
+		[self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

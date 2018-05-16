@@ -11,10 +11,13 @@
 
 @protocol ApiHandlerDelegate <NSObject>
 
+-(void)handleError;
+
 @optional
 
 -(void)didFinishLoadingIssuers;
 -(void)didFinishLoadingInstallments;
+
 
 @end
 
